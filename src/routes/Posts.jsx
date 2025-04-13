@@ -1,12 +1,15 @@
 import PostsList from '../components/PostsList/PostsList';
+import { Container } from '@mui/material';
 
 export default function Posts() {
   return (
-    <div className="Posts">
-      <div>
-        <PostsList />
+    <Container>
+      <div className="Posts">
+        <div>
+          <PostsList />
+        </div>
       </div>
-    </div>
+    </Container>
   );
 }
 
