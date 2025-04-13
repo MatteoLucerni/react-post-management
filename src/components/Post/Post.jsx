@@ -1,4 +1,4 @@
-import styles from './Post.module.css';
+import { Paper, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 function Post(props) {
@@ -9,11 +9,15 @@ function Post(props) {
       style={{ textDecoration: 'none', color: 'black' }}
       to={`/post/${props.id}`}
     >
-      <div className={styles['post-container']}>
-        <h1>{props.author}</h1>
-        <h4>Rating: {rating}/10</h4>
-        <p>{props.body}</p>
-      </div>
+      <Paper
+        elevation={24}
+        sx={{ p: 3, my: 2, mx: 'auto', maxWidth: 500 }}
+      >
+        <Typography variant="h3">{props.author}</Typography>
+        <Typography variant="h6">Rating: {rating}/10</Typography>
+        <br />
+        <Typography>{props.body}</Typography>
+      </Paper>
     </Link>
   );
 }

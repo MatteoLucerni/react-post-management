@@ -8,6 +8,10 @@ import PostDetails, {
 import Posts, { loader as postsLoader } from './routes/Posts.jsx';
 import NewPost, { action as newPostAction } from './routes/NewPost/NewPost.jsx';
 import RootLayout from './routes/RootLayout.jsx';
+import { ThemeProvider } from '@emotion/react';
+import { createTheme } from '@mui/material';
+
+const darkTheme = createTheme({ palette: { mode: 'dark' } });
 
 const router = createBrowserRouter([
   {
@@ -35,6 +39,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider theme={darkTheme}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>
 );

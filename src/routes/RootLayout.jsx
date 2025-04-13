@@ -1,5 +1,6 @@
 // layout che ritorna l'html dll'header (non esiste un compnente)
 import { Outlet, Link, useLocation } from 'react-router-dom';
+import { Button, List, ListItem, ListItemText } from '@mui/material';
 
 function RootLayout() {
   const location = useLocation();
@@ -9,7 +10,7 @@ function RootLayout() {
     <>
       <header>
         <nav style={{ marginBottom: '50px' }}>
-          <ul
+          <List
             style={{
               listStyle: 'none',
               display: 'flex',
@@ -18,26 +19,24 @@ function RootLayout() {
               margin: 0,
             }}
           >
-            <li>
-              <Link to="/">Home</Link>
-            </li>
+            <ListItem>
+              <ListItemText>
+                <Link to="/">Home</Link>
+              </ListItemText>
+            </ListItem>
             {!isNewPostRoute && (
-              <li>
-                <Link
-                  style={{
-                    border: '1px solid black',
-                    padding: '5px 20px',
-                    backgroundColor: 'lightgray',
-                    textDecoration: 'none',
-                    color: 'black',
-                  }}
-                  to="/create-post"
-                >
-                  Add a new post
+              <ListItem>
+                <Link to="/create-post">
+                  <Button
+                    color="success"
+                    variant="contained"
+                  >
+                    Add a new post
+                  </Button>
                 </Link>
-              </li>
+              </ListItem>
             )}
-          </ul>
+          </List>
         </nav>
       </header>
       <Outlet />

@@ -1,12 +1,20 @@
 import { useLoaderData } from 'react-router-dom';
 import Post from '../Post/Post';
+import { Box } from '@mui/material';
 
 export default function PostsList() {
   const posts = useLoaderData();
 
   return (
     <>
-      <div>
+      <Box
+        sx={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          flexDirection: { xs: 'column', md: 'row' },
+          gap: 1,
+        }}
+      >
         {posts.map(post => (
           <Post
             key={post.id + post.author + post.body + post.rate}
@@ -16,7 +24,7 @@ export default function PostsList() {
             id={post.id}
           />
         ))}
-      </div>
+      </Box>
     </>
   );
 }
