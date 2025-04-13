@@ -1,0 +1,39 @@
+{
+    "posts": [
+        {
+            "author": "Test 2",
+            "rate": "6",
+            "body": "wqdqwdq",
+            "id": "0.9765246067720161"
+        },
+        {
+            "author": "Test",
+            "rate": "1",
+            "body": "sdwqdwqe",
+            "id": "0.46644310605563555"
+        },
+        {
+            "author": "wsrew",
+            "body": "qweqw",
+            "rate": "2",
+            "id": "0.6815893374463904"
+        },
+        {
+            "author": "Mattei",
+            "body": "Evviva!",
+            "rate": "10",
+            "id": "0.9211864648524148"
+        },
+        {
+            "author": "wqew",
+            "body": "qwewq",
+            "rate": "2",
+            "id": "0.8051719372872359"
+        },
+        {
+            "body": "This course is hopefully very helpful to you!",
+            "author": "Maximilian",
+            "id": "post-1"
+        }
+    ]
+}
